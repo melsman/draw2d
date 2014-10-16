@@ -1,6 +1,6 @@
 ## draw2d - A Standard ML library for 2d drawing
 
-_Copyright 2007-2014, Martin Elsman_
+_Copyright 2010-2014, Martin Elsman_
 
 <img width="250" alt="House drawing" align="right" src="/images/house.png">
 
@@ -34,6 +34,8 @@ browser.
 See `Makefile` and `test/Makefile` for details of the building process. 
 
 ### Making your own drawings
+
+<img width="250" alt="Bath room design" align="right" src="/images/bath.png">
 
 See `draw.sig` for library signatures and `test/simple.sml` and
 `test/draw_house.sml` for examples.

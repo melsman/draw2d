@@ -1,3 +1,3 @@
 $SML_LIB/basis/basis.mlb
-../draw.mlb
+../draw2d.mlb
 simple.sml

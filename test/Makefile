@@ -1,5 +1,5 @@
 MLCOMP ?= mlkit
-SOURCES=../draw.mlb ../draw.sml ../draw.sig Makefile tdiagram.sml tdiagram.mlb simple.sml simple.mlb draw_house.sml draw_house.mlb frac.sml frac.mlb
+SOURCES=../draw2d.mlb ../draw.sml ../draw.sig Makefile tdiagram.sml tdiagram.mlb simple.sml simple.mlb draw_house.sml draw_house.mlb frac.sml frac.mlb
 
 .PHONY: all
 all: house.pdf ground.pdf bath.pdf simple.pdf frac.pdf tdiagram.pdf
