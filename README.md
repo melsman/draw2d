@@ -27,8 +27,9 @@ To try a series of examples, type
 
     $ make
 
-The examples generate .tex-files to be processed by pdflatex and
-.xml-files to be loaded in a browser (e.g., Firefox).
+The examples generate .tex-files, which are processed by `pdflatex`, and
+.xml-files, which can be injected into HTML and loaded by a Web
+browser.
 
 See `Makefile` and `test/Makefile` for details of the building process. 
 
