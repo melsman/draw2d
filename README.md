@@ -2,7 +2,7 @@
 
 _Copyright 2007-2014, Martin Elsman_
 
-<img width="150" alt="House drawing" align="right" src="/images/house.png">
+<img width="250" alt="House drawing" align="right" src="/images/house.png">
 
 This repository contains a simple Standard ML 2D drawing library. The
 library comes with multiple backends, including a LaTeX backend and an
@@ -10,8 +10,11 @@ SVG backend.
 
 ### Assumptions
 
+<img width="250" alt="Pythagoras tree" align="right" src="/images/pythagoras.png">
+
 The library assumes a Standard ML compiler that supports MLB
-files. MLKit or MLton will work.
+files. MLKit or MLton will work. To run the test examples, you also
+need `pdflatex` installed.
 
 ### How to test it
 
