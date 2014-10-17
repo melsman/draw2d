@@ -1,6 +1,6 @@
 (* Copyright 2010, Martin Elsman. MIT License *)
 
-local $SML_LIB/basis/basis.mlb
+local $(SML_LIB)/basis/basis.mlb
 in draw.sig
    draw.sml
 end

@@ -49,7 +49,7 @@ struct
  open P (* units: 1 unit is 1cm *) 
  val // = O.// infix //          
  val unitlength = 0.05
- val unitlength_s = "Målestoksforhold: 1:" ^ Int.toString (floor (10.0 / unitlength)) ^ "."
+ val unitlength_s = "M\\aa{}lestoksforhold: 1:" ^ Int.toString (floor (10.0 / unitlength)) ^ "."
  val red = O.C.stroke_color (O.C.RGB(255,0,0))
  val green = O.C.stroke_color (O.C.RGB(0,255,0))
  val left = O.C.text_halign O.C.Left
@@ -108,17 +108,17 @@ struct
                   O.translate (1800,~750) (O.scale (10.0,1.0) (W.ruler (SOME("0m","10m")))),
                   left // O.all
                        [O.text (0,3700) "{\\large\\textbf{Grund og bebyggelsesangivelser for Matr.\\ nr.\\ 2na, Pcl.\\ 1.}}",
-                        O.text (0,3600) "Peter Rørdams Vej 24, 2800 Lyngby.",
-                        O.text (0,~700) "Målangivelser er i centimeter. ",
+                        O.text (0,3600) "Peter R\\o{}rdams Vej 24, 2800 Lyngby.",
+                        O.text (0,~700) "M\\aa{}langivelser er i centimeter. ",
                         O.text (0,~800) unitlength_s,
                         O.text (1800,100) "Grund areal: 644m$^2$.",
                         O.text (1800,0) "Nyt bebyggelsesareal: 167m$^2$",
                         O.text (1900,~100) "(stue 99m$^2$ + 1.sal 68m$^2$).",
-                        O.text (1800,~200) "Kælderareal (dyb): 45m$^2$",
+                        O.text (1800,~200) "K\\ae{}lderareal (dyb): 45m$^2$",
                         O.text (1800,~300) "Bebyggelsesprocent: 25,9",
                         O.text (1800,~400) "Garageareal: 22m$^2$",
-                        O.text (1800,~500) "Højdekoter: Max 1m forskel",
-                        O.text (1900,~600) "i terrænhøjde på grund.",                   
+                        O.text (1800,~500) "H\\o{}jdekoter: Max 1m forskel",
+                        O.text (1900,~600) "i terr\\ae{}nh\\o{}jde p\\aa{} grund.",                   
                         O.text (30,1500) "Garage",
                         O.text (750,1550) "Udbygning",
                         O.text (700,900) "Oprindeligt hus"
@@ -134,7 +134,7 @@ struct
  open P
  val // = O.// infix //          
  val unitlength = 0.1
- val unitlength_s = "Målestoksforhold: 1:" ^ Int.toString (floor (10.0 / unitlength)) ^ "."
+ val unitlength_s = "M\\aa{}lestoksforhold: 1:" ^ Int.toString (floor (10.0 / unitlength)) ^ "."
  val red = O.C.stroke_color (O.C.RGB(255,0,0))
  val green = O.C.stroke_color (O.C.RGB(0,255,0))
  val left = O.C.text_halign O.C.Left
@@ -208,7 +208,7 @@ struct
             O.line (0,60) (90,60),
             O.line (0,80) (90,80)]
 
- (* Øst facade *)
+ (* Oest facade *)
 
  val found =
      O.all [dotline (0,25) (130,25),
@@ -251,8 +251,8 @@ struct
             O.translate (M.kvist2+110,450) kvist,  (*new*)
             O.translate (168,450) kv,
             left // 
-                 O.all [O.text (0,1000) "{\\large\\textbf{Østfacade for Matr.\\ nr.\\ 2na, Pcl.\\ 1}}",
-                        O.text (0,950) "Peter Rørdams Vej 24, 2800 Lyngby.",
+                 O.all [O.text (0,1000) "{\\large\\textbf{\\O{}stfacade for Matr.\\ nr.\\ 2na, Pcl.\\ 1}}",
+                        O.text (0,950) "Peter R\\o{}rdams Vej 24, 2800 Lyngby.",
                         O.text (0,900) ("\\textbf{Version " ^ date ^ "}")
                        ]
            ]
@@ -293,7 +293,7 @@ struct
             measure 200 (550,0) (550,360),
             red // 
                 O.all [dotline (850+500,0) (850,700),
-                       left // O.text (850,750) "skrå højdegrænseplan (1,4 $\\times$ \\emph{afstand til skel})",
+                       left // O.text (850,750) "skr\\aa{} h\\o{}jdegr\\ae{}nseplan (1,4 $\\times$ \\emph{afstand til skel})",
                        dotline (850+500,0) (850+500,100),
                        O.text (850+500,150) "skel"
                       ],
@@ -301,7 +301,7 @@ struct
             measure 100 (850,360) (850,450)
            ]
 
- (* Grundplan over første sal *)
+ (* Grundplan over foerste sal *)
 
  fun glass_h w = O.all [O.line (0,0) (w,0),
                         O.line (0,10) (w,10)]
@@ -348,7 +348,7 @@ struct
  val pict =
      O.all [O.translate (~200,1000) oest_facade,
             O.translate (~200,0) nord_facade,
-            left // O.all [O.text (~200,~100) "Målangivelser er i centimeter. ",
+            left // O.all [O.text (~200,~100) "M\\aa{}langivelser er i centimeter. ",
                            O.text (~200,~150) unitlength_s],
             O.translate (1300,~100) (W.ruler (SOME("0","1m")))
            ]
@@ -368,7 +368,7 @@ struct
  val @@ = O.@@ infix @@
  val unitlength = 0.5
  val oneto = floor (10.0 / unitlength)
- val unitlength_s = "Målestoksforhold: 1:" ^ Int.toString oneto ^ "."
+ val unitlength_s = "M\\aa{}lestoksforhold: 1:" ^ Int.toString oneto ^ "."
  val red = O.C.stroke_color (O.C.RGB(255,0,0))
  val green = O.C.stroke_color (O.C.RGB(0,255,0))
  val gray = O.C.stroke_color (O.C.RGB(200,200,200))
@@ -467,20 +467,20 @@ struct
  val noter =
      String.concat [
      "\\begin{minipage}{13cm}\\textbf{Noter:}\\begin{enumerate}",
-     "\\item Der lægges sorte gulvfliser (60x30) udenfor bad. Den lange fliseside lægges parallelt med vinduespartiet og sideliggende rækker lægges halvt forskudt.",
-     "\\item I bad lægges sorte mosaiksten",
-     "\\item Til badafskærmning mures der en sokkel rundt som anført (2 mosaiksten høj). Soklen beklæbes med mosaiksten på siderne fra væg til væg både indenfor og udenfor badet. I badåbningen lægges der tillige 2 rækker mosaiksten ovenpå soklen. Udenfor badåbningen placeres glasstenene ovenpå soklen.",
-     "\\item Vægge beklæbes med hvide vægfliser til loft og helt til gulv (ingen sokkel). Den lange fliseside sættes parallelt med loft og sideliggende rækker sættes halvt forskudt.",
-     "\\item Der indklæbes et spejl over vasken på 120x90 (BxH) i højden 105cm over gulv (spejlet erstatter fliserne)",
+     "\\item Der l\\ae{}gges sorte gulvfliser (60x30) udenfor bad. Den lange fliseside l\\ae{}gges parallelt med vinduespartiet og sideliggende r\\ae{}kker l\\ae{}gges halvt forskudt.",
+     "\\item I bad l\\ae{}gges sorte mosaiksten",
+     "\\item Til badafsk\\ae{}rmning mures der en sokkel rundt som anf\\o{}rt (2 mosaiksten h\\o{}j). Soklen bekl\\ae{}bes med mosaiksten p\\aa{} siderne fra v\\ae{}g til v\\ae{}g b\\aa{}de indenfor og udenfor badet. I bad\\aa{}bningen l\\ae{}gges der tillige 2 r\\ae{}kker mosaiksten ovenp\\aa{} soklen. Udenfor bad\\aa{}bningen placeres glasstenene ovenp\\aa{} soklen.",
+     "\\item V\\ae{}gge bekl\\ae{}bes med hvide v\\ae{}gfliser til loft og helt til gulv (ingen sokkel). Den lange fliseside s\\ae{}ttes parallelt med loft og sideliggende r\\ae{}kker s\\ae{}ttes halvt forskudt.",
+     "\\item Der indkl\\ae{}bes et spejl over vasken p\\aa{} 120x90 (BxH) i h\\o{}jden 105cm over gulv (spejlet erstatter fliserne)",
      "\\item Der etableres en termostat til gulvvarmen.",
      "\\item Der etableres en luftudsugning over bad.",
      "\\end{enumerate}\\end{minipage}"]
 
  val pict =
-     O.all [left // O.all [O.text (0,~40) "Målangivelser er i centimeter.",
+     O.all [left // O.all [O.text (0,~40) "M\\aa{}langivelser er i centimeter.",
                            O.text (0,~60) unitlength_s,
                            O.text (25,~75) " glassten 20x20cm",
-                           O.text (0,230) "{\\large\\textbf{Badeværelse, 1. Sal}}",
+                           O.text (0,230) "{\\large\\textbf{Badev\\ae{}relse, 1. Sal}}",
                            O.text (0,~180) noter],
             O.translate (0,~80) sten1,
             O.translate (220,~40) (W.ruler2 unitlength (SOME("0", Int.toString oneto ^ "cm"))),
@@ -508,7 +508,7 @@ struct
  open O
  infix // >> << ^^ vv %> %^ @@ &
  val oneto = floor (10.0 / unitlength)
- val unitlength_s = "Målestoksforhold: 1:" ^ Int.toString oneto ^ "."
+ val unitlength_s = "M\\aa{}lestoksforhold: 1:" ^ Int.toString oneto ^ "."
  val measure = W.measure unitlength
  val red = C.stroke_color (C.RGB(255,0,0))
  val green = C.stroke_color (C.RGB(0,255,0))
@@ -665,7 +665,7 @@ struct
           (stik ^^ (splitwall - 20)) &
           (stik ^^ 570) &
           (stik ^^ 590 >> 229) &
-          (stikkontakt ^^ (splitwall + vaeg) >> 110) & (* stikkontakt ved dør *)
+          (stikkontakt ^^ (splitwall + vaeg) >> 110) & (* stikkontakt ved d\\o{}r *)
           (translate (wall4+(*window2_width+wall4a -*) 40,splitwall + 160) loftudtag) &
           (door_north_left 90 ^^ splitwall >> wall2x) &
           (measure 50 (0,580) (wall4+window2_width+wall4a,580)) &
@@ -711,16 +711,16 @@ struct
                     #2 (foldl (fn (e,(n,a)) => (n+1,a & pp(n,e))) (1,all[]) elems))
 
  val noter = pp_list (fn (n,e) => O.text(0,n * ~50) (Int.toString n ^ ". " ^ e)) "Noter"
-             ["Højde på radiatorer: 50cm",      
-              "Højde på radiator i kvist: 40cm",      
+             ["H\\o{}jde p\\aa{} radiatorer: 50cm",      
+              "H\\o{}jde p\\aa{} radiator i kvist: 40cm",      
               "Stuekvistes ydre bredde: 190cm", 
-              "Skunkhøjde i ovenbygning: 80cm"]
+              "Skunkh\\o{}jde i ovenbygning: 80cm"]
 
  val symboler = 
      pp_list (fn (n,(e,s)) => (e & O.text(30,0) s) vv (n * 50)) "Symboler"
-             [(stik, "Stikdåse, 20cm over gulv"),
+             [(stik, "Stikd\\aa{}se, 20cm over gulv"),
               (kontakt, "Kontakt loftlampe, 110cm over gulv"),
-              (stikkontakt, "Stikdåse og kontakt, 110cm over gulv"),
+              (stikkontakt, "Stikd\\aa{}se og kontakt, 110cm over gulv"),
               (loftudtag, "Loftlampeudtag"),
               (indbspots, "Indbygningsspot"),
               (udluftning, "Ventilation")]
@@ -735,14 +735,14 @@ struct
                    translate (510,240) udluftning,
                    translate (250,800) loftudtag,
                    text (350,800) "Stue",
-                   text (240,1100) "Værelse",
-                   text (480,1100) "Værelse",
-                   text (150,300) "Værelse",
-                   text (700,300) "Værelse",
+                   text (240,1100) "V\\ae{}relse",
+                   text (480,1100) "V\\ae{}relse",
+                   text (150,300) "V\\ae{}relse",
+                   text (700,300) "V\\ae{}relse",
                    W.ruler (SOME("0","1m")) vv 150,
                    translate corner (radiator 80) >> 15 ^^ 70,
                    translate corner (radiator 120 %> ~1.0) >> 44 ^^ 425,
-                   left // all [O.text (500,~50) "Målangivelser er i centimeter.",
+                   left // all [O.text (500,~50) "M\\aa{}langivelser er i centimeter.",
                                 O.text (500,~100) "Orange linier angiver 150cm afstand til ydre tag.",
                                 O.text (500,~150) ("Areal 1. sal (indenfor orange linier, inkl. kvistarealer): " ^ Int.toString area ^ "m$^2$"),
                                 O.text (500,~200) unitlength_s,

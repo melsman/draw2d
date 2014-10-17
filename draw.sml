@@ -316,11 +316,17 @@ structure LatexPicture :> PICTURE = struct
   structure W = Widget
   type t = string list
 
+  fun real_to_string r =
+      let fun posreal_to_string r = Real.fmt (StringCvt.FIX NONE) r
+      in if r < 0.0 then "-" ^ posreal_to_string (~r)
+         else posreal_to_string r
+      end
+
   fun pr_color (O.C.RGB(r,g,b)) =
       let fun pr_comp i =
               if i > 255 orelse i < 0 then
                 raise Fail "pr_color"
-              else Real.toString (real i / 255.0)
+              else real_to_string (real i / 255.0)
       in
         "[rgb]{" ^ pr_comp r ^ "," ^ pr_comp g ^ "," ^ pr_comp b ^ "}"
       end
@@ -332,9 +338,6 @@ structure LatexPicture :> PICTURE = struct
   fun int_to_string i =
       if i < 0 then "-" ^ Int.toString (~i)
       else Int.toString i
-  fun real_to_string r =
-      if r < 0.0 then "-" ^ Real.toString (~r)
-      else Real.toString r
 
   fun pr_p (x, y) = 
       "(" ^ int_to_string (floor x) ^ "," ^ int_to_string (floor y) ^ ")"
@@ -479,8 +482,10 @@ structure SvgPicture :> PICTURE = struct
       if i < 0 then "-" ^ Int.toString (~i)
       else Int.toString i
   fun real_to_string r =
-      if r < 0.0 then "-" ^ Real.toString (~r)
-      else Real.toString r
+      let fun posreal_to_string r = Real.fmt (StringCvt.FIX NONE) r
+      in if r < 0.0 then "-" ^ posreal_to_string (~r)
+         else posreal_to_string r
+      end
 
   fun pr_p (x, y) = 
       "(" ^ int_to_string (floor x) ^ "," ^ int_to_string (floor y) ^ ")"

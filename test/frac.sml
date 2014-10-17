@@ -9,13 +9,13 @@ functor Frac(structure P : PICTURE
 
  infix // & >> @@ %^ vv ^^ <<
  val op // = O.//
- val & = O.&
- val >> = O.>>
- val << = O.<<
- val @@ = O.@@
- val %^ = O.%^
- val vv = O.vv
- val ^^ = O.^^
+ val op & = O.&
+ val op >> = O.>>
+ val op << = O.<<
+ val op @@ = O.@@
+ val op %^ = O.%^
+ val op vv = O.vv
+ val op ^^ = O.^^
 
  fun frac (n, len) = 
      if n = 0 then O.line (0,0) (len,0)

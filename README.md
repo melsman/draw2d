@@ -13,8 +13,9 @@ SVG backend.
 <img width="250" alt="Pythagoras tree" align="right" src="/images/pythagoras.png">
 
 The library assumes a Standard ML compiler that supports MLB
-files. MLKit or MLton will work. To run the test examples, you also
-need `pdflatex` installed.
+files. [MLKit](http://melsman.github.io/mlkit) or
+[MLton](http://mlton.org) will work. To run the test examples, you
+also need `pdflatex` installed.
 
 ### How to test it
 
@@ -31,14 +32,16 @@ The examples generate .tex-files, which are processed by `pdflatex`, and
 .xml-files, which can be injected into HTML and loaded by a Web
 browser.
 
-See `Makefile` and `test/Makefile` for details of the building process. 
+See [Makefile](/Makefile) and [test/Makefile](/test/Makefile) for
+details of the building process.
 
 ### Making your own drawings
 
 <img width="250" alt="Bath room design" align="right" src="/images/bath.png">
 
-See `draw.sig` for library signatures and `test/simple.sml` and
-`test/draw_house.sml` for examples.
+See [draw.sig](/draw.sig) for library signatures and
+[test/simple.sml](/test/simple.sml) and
+[test/draw_house.sml](/test/draw_house.sml) for examples.
 
 ### LICENSE
 
