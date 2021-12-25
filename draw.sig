@@ -46,6 +46,8 @@ signature OBJECT = sig
   val scale     : real * real -> t -> t
   val mirror    : point -> point -> t -> t     (* not supported yet *)
 
+  val mirror_yaxis : t -> t
+
   (* Infix operators *)
   val >> : t * int -> t
   val << : t * int -> t
@@ -105,7 +107,7 @@ signature PICTURE = sig
   structure O : OBJECT
   structure W : WIDGET
   sharing type O.t = W.O.t
-  sharing O.C = W.O.C 
+  sharing O.C = W.O.C
   datatype length = MM of real | CM of real | PT of int
   val picture : {unitlength:length,
                  dim:int*int} -> O.t -> t
